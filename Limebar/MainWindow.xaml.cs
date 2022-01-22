@@ -357,7 +357,7 @@ namespace Limebar
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             panels.ForEach(p => p.Stop());
-
+            AppBarFunctions.SetAppBar(this, ABEdge.None);
             this.Owner = null;
             invisibleOwnerWindow.Close();
             invisibleOwnerWindow = null;
