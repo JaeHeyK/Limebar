@@ -1,7 +1,7 @@
 #Powershell script for use with Limebar. Return the percentage of free memory.
 
 $os = Get-Ciminstance Win32_OperatingSystem
-$pctFree = [math]::Round(($os.FreePhysicalMemory/$os.TotalVisibleMemorySize)*100)
+$pctFree = [math]::Round((1-$os.FreePhysicalMemory/$os.TotalVisibleMemorySize)*100)
 Write-Host $pctFree 
 
 # Example Limebar config to use this script
