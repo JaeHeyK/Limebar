@@ -98,11 +98,11 @@ namespace Limebar
             this.Foreground = Brushes.Aquamarine;
             if (settings.BarLocation == BarPosition.Top)
             {
-                AppBarFunctions.SetAppBar(this, ABEdge.Top, mainPanel);
+                AppBarFunctions.SetAppBar(this, ABEdge.Top, mainPanel, false);
             }
             else
             {
-                AppBarFunctions.SetAppBar(this, ABEdge.Bottom, mainPanel);
+                AppBarFunctions.SetAppBar(this, ABEdge.Bottom, mainPanel, false);
             }
         }
 
