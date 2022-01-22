@@ -230,7 +230,7 @@ namespace Limebar
             runTask();
 
             timer.Tick += Timer_Tick;
-            timer.Interval = new TimeSpan(0, 0, this.UpdateFrequency);
+            timer.Interval = new TimeSpan(0, 0, 0,0,this.UpdateFrequency);
             timer.Start();
         }
 
