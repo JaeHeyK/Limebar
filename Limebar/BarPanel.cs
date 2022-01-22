@@ -294,22 +294,8 @@ namespace Limebar
         /// <returns>A string containing the current time</returns>
         private string getClockText()
         {
-            var returnString = string.Empty;
-
-            if (Options.Contains("ShowDate"))
-            {
-                returnString += DateTime.Now.ToShortDateString() + " ";
-            }
-
-            if (Options.Contains("ShowSeconds"))
-            {
-                returnString += DateTime.Now.ToLongTimeString();
-            }
-            else
-            {
-                returnString += DateTime.Now.ToShortTimeString();
-            }
-
+            var returnString = DateTime.Now.ToString(Options);
+            
             return returnString;
         }
 
