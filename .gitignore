@@ -254,3 +254,5 @@ paket-files/
 
 # Default json file
 Limebar/config.json
+# Backup folder
+Limebar.backup/
