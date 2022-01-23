@@ -357,7 +357,8 @@ namespace Limebar
                 PowerShell powerShell = PowerShell.Create();
                 try
                 {
-                    powerShell.AddScript(command);
+                    string scripts = File.ReadAllText(command);
+                    powerShell.AddScript(scripts);
                     var results = powerShell.Invoke();
 
                     if (powerShell.Streams.Information != null && powerShell.Streams.Information.Count > 0)
@@ -381,8 +382,14 @@ namespace Limebar
                 }
                 catch (Exception e)
                 {
-
                     result = $"Powershell exception: {e.Message}";
+                    if (ResultsFilename != "")
+                    {
+                        using (StreamWriter outputfile = new StreamWriter(ResultsFilename))
+                        {
+                            outputfile.WriteLine(result);
+                        }
+                    }
                 }
             }
 
