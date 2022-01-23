@@ -89,12 +89,22 @@ namespace Limebar
         /// <summary>
         /// The foreground colour of this panel
         /// </summary>
-        public Brush Foreground = Brushes.Green;
+        private Brush _foreground = Brushes.Green;
+        public Brush Foreground
+        {
+            get { return _foreground;}
+            set { _foreground = value is Brush ? value : (Brush)new BrushConverter().ConvertFrom(value); }
+        }
 
         /// <summary>
         /// The background colour of this panel
         /// </summary>
-        public Brush Background = Brushes.Black;
+        private Brush _background = Brushes.Black;
+        public Brush Background
+        {
+            get { return _background;}
+            set { _background = value is Brush ? value : (Brush)new BrushConverter().ConvertFrom(value); }
+        }
 
         /// <summary>
         /// How often the panel should update

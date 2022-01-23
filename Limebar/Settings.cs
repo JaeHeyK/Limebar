@@ -35,6 +35,16 @@ namespace Limebar
         public int BarHeight { get; set; }
 
         /// <summary>
+        ///  The ARGB hex color code for bar background
+        /// </summary>
+        private Brush _barBackground = Brushes.Black;
+        public Brush BarBackground
+        {
+            get { return _barBackground;}
+            set { _barBackground = value is Brush ? value : (Brush)new BrushConverter().ConvertFrom(value); }
+        }
+
+        /// <summary>
         /// The location of the bar on the screen
         /// </summary>
         public BarPosition BarLocation { get; set; }

@@ -94,7 +94,7 @@ namespace Limebar
         {
             this.Height = settings.BarHeight;
             this.VerticalAlignment = settings.PanelAlignment;
-            this.Background = Brushes.Black;
+            this.Background = settings.BarBackground;
             this.Foreground = Brushes.Aquamarine;
             if (settings.BarLocation == BarPosition.Top)
             {
