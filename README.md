@@ -1,4 +1,5 @@
 # Limebar
+![usage](./screenshots/usage.png)
 Limebar is a Statusline bar for Windows (similar to Lemonbar on Linux).
 
 It is a slim bar which spans the entire width of the screen and can be positioned at the top or bottom of the display.
