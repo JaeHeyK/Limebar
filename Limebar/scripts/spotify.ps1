@@ -5,5 +5,5 @@ $song = $null
 if (-Not $title.Contains('Spotify')) {
   $song = $title
 }
-cls
+
 Write-Output "$song"
